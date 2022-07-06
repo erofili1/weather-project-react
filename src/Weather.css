@@ -1,0 +1,15 @@
+.Weather {
+  width:700px;
+  margin: 0 auto;
+  padding: 30px 50px;
+  border: 1px solid #b1b3b6;
+}
+
+li {
+  list-style: none;
+}
+
+
+.search-form {
+  margin: 20px;
+}
