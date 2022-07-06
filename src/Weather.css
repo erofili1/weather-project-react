@@ -11,5 +11,41 @@ li {
 
 
 .search-form {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  
+}
+
+.btn {
+  width: 190px;
+}
+
+.city-weather {
+  text-align: left;
+  font-size: 18px;
+}
+
+.city-name {
+  font-size: 34px;
+  font-weight: 500;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.temperature {
+  line-height: 56px;
+  font-size: 50px;
+}
+
+.celsius {
+  position: relative;
+  top: -22px;
+  
+}
+
+.weather-stats {
+  font-size: 18px;
 }

@@ -15,21 +15,21 @@ export default function Weather() {
         </div>
       </form>
       <div className="row">
-        <div className="col-5">
-          <ul className="weather-info-list">
-            <li><h2>Chania</h2></li>
+        <div className="col-4">
+          <ul className="city-weather">
+            <li><span className="city-name">Chania</span></li>
             <li>Wednesday 15:00</li>
             <li>Sunny</li>
           </ul>
         </div>
         <div className="col-2">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" />
+          <img className="weather-icon" src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="sunny" />
         </div>
-        <div className="col-1">
-          31 °C
+        <div className="col-2">
+          <span className="temperature">31</span> <span className="celsius">°C</span>
         </div>
         <div className="col-4">
-          <ul>
+          <ul className="weather-stats">
             <li>Percipitation: 0%</li>
             <li>Humidity: 44%</li>
             <li>Wind: 5 km/h</li>
