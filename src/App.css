@@ -6,3 +6,9 @@
 h2 {
   margin: 20px;
 }
+
+.container {
+  max-width: 720px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
