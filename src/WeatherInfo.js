@@ -1,7 +1,12 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
+  function convertToFahrenheit(event) {
+    event.preventDefault();
+  }
+
   return (
     <div className="WeatherInfo">
       <div className="row">
@@ -25,13 +30,8 @@ export default function WeatherInfo(props) {
             src={`http://openweathermap.org/img/wn/${props.info.icon}@2x.png`}
             alt={props.info.description}
           />
-          <span className="temperature">
-            {Math.round(props.info.temperature)}
-          </span>{" "}
-          <span className="celsius">°C |</span>{" "}
-          <a href="/" className="fahrenheit">
-            °F
-          </a>
+
+          <Temperature celsius={props.info.temperature} />
         </div>
 
         <div className="col-6">
@@ -45,3 +45,9 @@ export default function WeatherInfo(props) {
   );
 }
 //(0°C × 9/5) + 32 = 32°F
+// function celsiusToFahr(event) {
+//   event.preventDefault();
+//   celsiusLink.classList.remove("active");
+//   fahrLink.classList.add("active");
+//   temperatureElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
+// }
