@@ -27,7 +27,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <SearchForm />
+        <SearchForm city={props.defaultCity} />
 
         <WeatherInfo info={weatherData} />
       </div>
