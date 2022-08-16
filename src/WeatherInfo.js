@@ -28,7 +28,10 @@ export default function WeatherInfo(props) {
           <span className="temperature">
             {Math.round(props.info.temperature)}
           </span>{" "}
-          <span className="celsius">°C</span>
+          <span className="celsius">°C |</span>{" "}
+          <a href="/" className="fahrenheit">
+            °F
+          </a>
         </div>
 
         <div className="col-6">
@@ -41,3 +44,4 @@ export default function WeatherInfo(props) {
     </div>
   );
 }
+//(0°C × 9/5) + 32 = 32°F
