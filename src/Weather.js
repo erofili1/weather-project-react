@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import SearchForm from "./SearchForm";
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
@@ -26,6 +27,7 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
+        <SearchForm />
         <form className="search-form">
           <div className="row">
             <div className="col-9">
