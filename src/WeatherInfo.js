@@ -44,10 +44,3 @@ export default function WeatherInfo(props) {
     </div>
   );
 }
-//(0°C × 9/5) + 32 = 32°F
-// function celsiusToFahr(event) {
-//   event.preventDefault();
-//   celsiusLink.classList.remove("active");
-//   fahrLink.classList.add("active");
-//   temperatureElement.innerHTML = Math.round((celsiusTemp * 9) / 5 + 32);
-// }
