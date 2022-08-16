@@ -6,6 +6,10 @@
   color: rgb(135, 135, 135);
 }
 
+.form-control {
+  margin-bottom: 10px;
+}
+
 .city-name {
   font-size: 24px;
   font-weight: 100;
