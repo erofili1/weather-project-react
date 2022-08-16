@@ -40,17 +40,13 @@
 }
 
 .celsius {
-  color: rgb(33, 33, 33);
   font-size: 16px;
   position: relative;
   top: -34px;
-  text-decoration: none;
 }
 
 .fahrenheit {
-  color: rgb(33, 33, 33);
   font-size: 16px;
   position: relative;
-  text-decoration: none;
   top: -34px;
 }
