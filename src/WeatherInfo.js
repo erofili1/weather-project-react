@@ -1,4 +1,3 @@
-import React from "react";
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 

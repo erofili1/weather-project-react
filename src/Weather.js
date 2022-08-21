@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import WeatherError from "./WeatherError";
 import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
@@ -77,8 +78,9 @@ export default function Weather(props) {
         </div>
       </form>
 
-      {error}
+      {error && <WeatherError error={error} />}
 
+      {/* If not error, run WeatherInfo component */}
       {!error && <WeatherInfo info={weatherData} />}
     </div>
   );
