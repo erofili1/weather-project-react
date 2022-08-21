@@ -3,10 +3,6 @@ import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 
 export default function WeatherInfo(props) {
-  function convertToFahrenheit(event) {
-    event.preventDefault();
-  }
-
   return (
     <div className="WeatherInfo">
       <div className="row">
