@@ -1,0 +1,17 @@
+.Forecast {
+  text-align: center;
+}
+
+.forecast-day {
+  font-size: 16px;
+}
+
+.temp-max {
+  font-size: 13px;
+  color: black;
+  font-weight: bold;
+}
+
+.temp-min {
+  font-size: 13px;
+}

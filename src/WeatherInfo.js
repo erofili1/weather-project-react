@@ -1,5 +1,6 @@
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
+import Forecast from "./Forecast";
 
 export default function WeatherInfo(props) {
   return (
@@ -36,6 +37,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
+      <Forecast icon={props.info.icon} />
     </div>
   );
 }
