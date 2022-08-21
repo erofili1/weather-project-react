@@ -6,12 +6,14 @@ import WeatherInfo from "./WeatherInfo";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [error, setError] = useState([{ has_error: false }]);
 
   // const apiKey = `7654bb3646824703bcfdf4ced8409f03`;
   // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 
   function handleResponse(response) {
     console.log(response.data);
+
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
@@ -21,6 +23,14 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+    });
+  }
+
+  function handleError(error) {
+    console.log(error.message);
+    setError({
+      message: error.message,
+      has_error: true,
     });
   }
 
@@ -38,7 +48,7 @@ export default function Weather(props) {
     const apiKey = `7654bb3646824703bcfdf4ced8409f03`;
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(handleError);
   }
 
   if (weatherData.ready) {
