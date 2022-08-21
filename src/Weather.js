@@ -13,12 +13,14 @@ export default function Weather(props) {
   // const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 
   useEffect(() => {
+    console.log("Weather Data: ", city, weatherData);
+  }, [weatherData, city]);
+
+  useEffect(() => {
     search();
   }, []);
 
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeatherData({
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
