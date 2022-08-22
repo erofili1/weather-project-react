@@ -1,6 +1,7 @@
 import FormattedDate from "./FormattedDate";
 import Temperature from "./Temperature";
 import Forecast from "./Forecast";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -21,6 +22,8 @@ export default function WeatherInfo(props) {
 
       <div className="row">
         <div className="col-6 weather-block">
+          <WeatherIcon code={props.info.icon} />
+
           <img
             className="weather-icon"
             src={`http://openweathermap.org/img/wn/${props.info.icon}@2x.png`}
@@ -37,7 +40,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <Forecast icon={props.info.icon} />
+      <Forecast />
     </div>
   );
 }
