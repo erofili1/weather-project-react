@@ -22,15 +22,17 @@ export default function WeatherInfo(props) {
 
       <div className="row">
         <div className="col-6 weather-block">
-          <WeatherIcon code={props.info.icon} />
-
-          <img
-            className="weather-icon"
-            src={`http://openweathermap.org/img/wn/${props.info.icon}@2x.png`}
-            alt={props.info.description}
-          />
-
-          <Temperature celsius={props.info.temperature} />
+          <div className="d-flex">
+            <div>
+              <WeatherIcon
+                code={props.info.icon}
+                alt={props.info.description}
+              />
+            </div>
+            <div>
+              <Temperature celsius={props.info.temperature} />
+            </div>
+          </div>
         </div>
 
         <div className="col-6">

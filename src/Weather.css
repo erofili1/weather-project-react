@@ -18,7 +18,7 @@
 }
 
 .city-weather {
-  margin: 0;
+  margin-bottom: 15px;
   padding: 0;
 }
 
@@ -27,6 +27,10 @@
   font-weight: 100;
   line-height: 19px;
   list-style: none;
+}
+.Weather canvas {
+  margin-right: 10px;
+  display: inline-block;
 }
 
 .temperature {
