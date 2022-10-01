@@ -10,9 +10,17 @@ export default function ForecastDay(props) {
     return `${temperature}°`;
   }
 
+  function day() {
+    let weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let date = new Date(props.data.dt * 1000);
+    let day = date.getDay();
+
+    return weekdays[day];
+  }
+
   return (
     <div>
-      <div className="forecast-day">{props.data.dt}</div>
+      <div className="forecast-day">{day()}</div>
       <div>
         <WeatherIcon code={props.data.weather[0].icon} />
       </div>

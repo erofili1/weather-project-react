@@ -14,8 +14,6 @@ export default function Forecast(props) {
   }
 
   if (loaded) {
-    console.log(forecast);
-    console.log(forecast[0].weather[0].icon);
     return (
       <div className="Forecast">
         <div className="row">
