@@ -14,13 +14,14 @@ export default function Forecast(props) {
 
   if (loaded) {
     console.log(forecast);
+    console.log(forecast[0].weather[0].icon);
     return (
       <div className="Forecast">
         <div className="row">
           <div className="col">
-            <div className="forecast-day">Thu</div>
+            <div className="forecast-day">{forecast[0].dt}</div>
             <div>
-              <WeatherIcon code="01d" />
+              <WeatherIcon code={forecast[0].weather[0].icon} />
             </div>
             <div className="Forecast-temperatures">
               <span className="temp-max">
