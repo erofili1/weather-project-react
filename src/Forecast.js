@@ -23,19 +23,24 @@ export default function Forecast(props) {
               <WeatherIcon code="01d" />
             </div>
             <div className="Forecast-temperatures">
-              <span className="temp-max">32°</span>{" "}
-              <span className="temp-min">26°</span>
+              <span className="temp-max">
+                {Math.round(forecast[0].temp.max)}°
+              </span>{" "}
+              <span className="temp-min">
+                {Math.round(forecast[0].temp.min)}°
+              </span>
             </div>
           </div>
         </div>
       </div>
     );
   } else {
+    let forecastApiKey = `7654bb3646824703bcfdf4ced8409f03`;
+
     let lat = props.data.lat;
     let lon = props.data.lon;
 
-    let forecastApiKey = `7654bb3646824703bcfdf4ced8409f03`;
-    let forecastApiUrl = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${forecastApiKey}&units=metric`;
+    let forecastApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${forecastApiKey}&units=metric`;
 
     axios.get(forecastApiUrl).then(handleResponse);
     return null;
