@@ -42,7 +42,7 @@ export default function WeatherInfo(props) {
           </ul>
         </div>
       </div>
-      <Forecast icon={props.info.icon} />
+      <Forecast data={props.info} />
     </div>
   );
 }

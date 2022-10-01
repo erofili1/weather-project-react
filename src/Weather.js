@@ -18,6 +18,7 @@ export default function Weather(props) {
   }, []);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
@@ -26,6 +27,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon,
     });
   }
 
